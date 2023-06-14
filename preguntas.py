@@ -139,7 +139,7 @@ def pregunta_11():
             string = string + str(item) + ","
         string = string[:-1]
         temp = pd.DataFrame({"_c0":[letra], "_c4": string})
-        dataf = dataf.append(temp, ignore_index=True)
+        dataf = pd.concat([dataf,temp], ignore_index=True)
     return dataf
 
 def pregunta_12():
